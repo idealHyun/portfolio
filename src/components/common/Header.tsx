@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+type Props = {};
 
 export default function Header({}: Props) {
+  const navLinks = ['ABOUT ME', 'SKILLS', 'ACTIVITY', 'CONTACT'];
 
   return (
     <div>
-        ABOUT ME, SKILLS, PROJECTS, ACTIVITY, CONTACT
+      <span>idealHyun</span>
+      <nav>
+        <ul>{/*{navLinks.map(link => ())}*/}</ul>
+      </nav>
     </div>
-  )
+  );
 }
