@@ -7,16 +7,19 @@ type Props = {
 
 export default function SkillIcon({ skillName }: Props) {
   return (
-    <Image
-      key={'html5'}
-      className='rounded-sm mx-1'
-      src={`/icons/${skillName}.svg`}
-      alt={'stack'}
-      priority
-      quality={100}
-      width={50}
-      height={50}
-      style={{ width: 50, height: 50 }}
-    />
+    <div className="flex flex-col justify-center items-center">
+      <Image
+        key={skillName}
+        className="rounded-sm mx-1"
+        src={`/icons/${skillName}.svg`}
+        alt={'stack'}
+        priority
+        quality={100}
+        width={30}
+        height={30}
+        style={{ width: 30, height: 30 }}
+      />
+      <span>{skillName}</span>
+    </div>
   );
 }
