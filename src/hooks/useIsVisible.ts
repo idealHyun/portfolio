@@ -10,7 +10,10 @@ export function useIsVisible(ref: RefObject<HTMLElement>): boolean {
     }
 
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
     });
 
     observer.observe(ref.current);
@@ -18,7 +21,7 @@ export function useIsVisible(ref: RefObject<HTMLElement>): boolean {
     return () => {
       observer.disconnect();
     };
-  }, [ref]);
+  }, [ref, isVisible]);
 
   return isVisible;
 }
