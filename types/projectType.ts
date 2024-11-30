@@ -1,7 +1,6 @@
 export type ProjectType = {
   title: string;
   subTitle: string;
-  description: string;
   functions: string[];
   contributions: string[];
   startDate: string;
