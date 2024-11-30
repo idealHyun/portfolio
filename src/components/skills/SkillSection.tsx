@@ -20,36 +20,52 @@ export default function SkillSection() {
   return (
     <section id="skills" className="flex flex-col w-full bg-gray-100">
       <Title title="SKILLS" />
-      <div className="bg-white m-10 p-4 rounded-2xl">
-        <div id="language" className="flex items-center">
-          <span className="text-xl font-semibold mr-8">Languages</span>
-          {languages.map((language: string) => (
-            <SkillIcon key={language} skillName={language} />
-          ))}
+
+      <div className="flex flex-col gap-4 bg-white m-10 p-4 rounded-2xl">
+        {/* Languages */}
+        <div id="language" className="flex gap-2">
+          <span className="text-xl font-semibold flex-[1]">Languages</span>
+          <div className="flex flex-wrap gap-2 flex-[3]">
+            {languages.map((language: string) => (
+              <SkillIcon key={language} skillName={language} />
+            ))}
+          </div>
         </div>
+        {/* FrontEnd */}
         <div id="frontend" className="flex gap-2">
-          <span className="text-xl font-bold mr-8">FrontEnd</span>
-          {frontendSkills.map((skill: string) => (
-            <SkillIcon key={skill} skillName={skill} />
-          ))}
+          <span className="text-xl font-bold flex-[1]">FrontEnd</span>
+          <div className="flex flex-wrap gap-2 flex-[3]">
+            {frontendSkills.map((skill: string) => (
+              <SkillIcon key={skill} skillName={skill} />
+            ))}
+          </div>
         </div>
-        <div id="backend" className="flex  gap-2">
-          <span className="text-xl font-bold mr-8">BackEnd</span>
-          {backendSkills.map((skill: string) => (
-            <SkillIcon key={skill} skillName={skill} />
-          ))}
+        {/* BackEnd */}
+        <div id="backend" className="flex gap-2">
+          <span className="text-xl font-bold flex-[1]">BackEnd</span>
+          <div className="flex flex-wrap gap-2 flex-[3]">
+            {backendSkills.map((skill: string) => (
+              <SkillIcon key={skill} skillName={skill} />
+            ))}
+          </div>
         </div>
-        <div id="devops" className="flex  gap-2">
-          <span className="text-xl font-bold mr-8">DevOps</span>
-          {devopsSkills.map((skill: string) => (
-            <SkillIcon key={skill} skillName={skill} />
-          ))}
+        {/* DevOps */}
+        <div id="devops" className="flex gap-2">
+          <span className="text-xl font-bold flex-[1]">DevOps</span>
+          <div className="flex flex-wrap gap-2 flex-[3]">
+            {devopsSkills.map((skill: string) => (
+              <SkillIcon key={skill} skillName={skill} />
+            ))}
+          </div>
         </div>
-        <div id="etc" className="flex  gap-2">
-          <span className="text-xl font-bold mr-8">Etc</span>
-          {etcSkills.map((skill: string) => (
-            <SkillIcon key={skill} skillName={skill} />
-          ))}
+        {/* Etc */}
+        <div id="etc" className="flex gap-2">
+          <span className="text-xl font-bold flex-[1]">Etc</span>
+          <div className="flex flex-wrap gap-2 flex-[3]">
+            {etcSkills.map((skill: string) => (
+              <SkillIcon key={skill} skillName={skill} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

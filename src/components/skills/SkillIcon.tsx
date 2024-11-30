@@ -19,7 +19,6 @@ export default function SkillIcon({ skillName }: Props) {
         height={30}
         style={{ width: 30, height: 30 }}
       />
-      <span>{skillName}</span>
     </div>
   );
 }
