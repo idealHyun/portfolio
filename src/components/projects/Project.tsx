@@ -9,7 +9,7 @@ import Modal from '@/components/projects/Modal';
 export default function Project({ project }: { project: ProjectType }) {
   const [isModal, setIsModal] = useState<boolean>(false);
 
-  const handleClick = () => {
+  const readmeClick = () => {
     setIsModal(true);
   };
 
@@ -51,12 +51,22 @@ export default function Project({ project }: { project: ProjectType }) {
             ))}
           </div>
 
-          <button
-            className="rounded-lg bg-gray-800 p-1 text-white"
-            onClick={handleClick}
-          >
-            README
-          </button>
+          <div className="flex ">
+            <button
+              className="rounded-lg bg-gray-800 p-1 text-white"
+              onClick={readmeClick}
+            >
+              README
+            </button>
+            {project.githubUrl && (
+              <button
+                className="rounded-lg bg-gray-800 p-1 text-white"
+                onClick={() => window.open(project.githubUrl!, '_blank')}
+              >
+                Github
+              </button>
+            )}
+          </div>
         </div>
       </div>
       {/* Modal Component */}
