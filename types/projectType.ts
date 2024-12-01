@@ -1,5 +1,6 @@
 export type ProjectType = {
   title: string;
+  mdFilePath: string;
   subTitle: string;
   functions: string[];
   contributions: string[];
