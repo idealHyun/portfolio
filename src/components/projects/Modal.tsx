@@ -40,16 +40,20 @@ const Modal: React.FC<ModalProps> = ({
       onClick={onClose} // 배경 클릭 시 모달 닫기
     >
       <div
-        className="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full mx-4"
+        className="relative bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full mx-4"
         onClick={(e) => e.stopPropagation()} // 콘텐츠 클릭 시 닫힘 방지
       >
+        {/* 닫기 버튼 */}
         <button
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+          className="absolute top-4 right-4 text-gray-700 rounded-full w-8 h-8 font-bold flex items-center justify-center hover:bg-gray-300"
           onClick={onClose}
         >
-          &times; {/* 닫기 버튼 */}
+          &times;
         </button>
-        <ReactMarkdown>{mdContent}</ReactMarkdown>
+
+        <div className="markdown-wrapper">
+          <ReactMarkdown>{mdContent}</ReactMarkdown>
+        </div>
       </div>
     </div>
   );
