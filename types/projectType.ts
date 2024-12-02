@@ -7,6 +7,6 @@ export type ProjectType = {
   category: 'Personal' | 'Team';
   techStacks: string[];
   githubUrl: string | null;
-  images: string[] | null;
+  images: string[];
   thumbNail: string;
 };

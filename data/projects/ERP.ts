@@ -9,6 +9,6 @@ export const ERP: ProjectType = {
   category: 'Team',
   techStacks: ['csharp', 'mysql'],
   githubUrl: null,
-  images: null,
+  images: [],
   thumbNail: '',
 };

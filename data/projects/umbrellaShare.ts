@@ -9,6 +9,6 @@ export const umbrellaShare: ProjectType = {
   category: 'Team',
   techStacks: ['typescript'],
   githubUrl: 'https://github.com/C4-KSCL/SOUL-MBTIE',
-  images: null,
+  images: [],
   thumbNail: '',
 };

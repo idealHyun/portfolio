@@ -7,7 +7,7 @@ type ModalProps = {
   mdFilePath: string;
 };
 
-const Modal: React.FC<ModalProps> = ({
+const MdxModal: React.FC<ModalProps> = ({
   isOpen,
   onClose,
   mdFilePath,
@@ -59,4 +59,4 @@ const Modal: React.FC<ModalProps> = ({
   );
 };
 
-export default Modal;
+export default MdxModal;
