@@ -8,4 +8,5 @@ export type ProjectType = {
   techStacks: string[];
   githubUrl: string | null;
   images: string[] | null;
+  thumbNail: string;
 };

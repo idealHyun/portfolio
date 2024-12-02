@@ -24,12 +24,7 @@ export default function Project({ project }: { project: ProjectType }) {
         className="flex w-full justify-center items-center border-2 rounded-xl overflow-hidden"
       >
         {/* Project Thumbnail */}
-        <Image
-          src="/images/about/취업사진2.jpg"
-          alt="Project"
-          width={150}
-          height={200}
-        />
+        <Image src={project.thumbNail} alt="Project" width={150} height={200} />
         {/* Project Content */}
         <div className="flex h-full flex-col justify-between items-start px-4 py-2">
           <div>

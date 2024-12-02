@@ -10,4 +10,5 @@ export const gukbab: ProjectType = {
   techStacks: ['csharp', 'mysql'],
   githubUrl: null,
   images: null,
+  thumbNail: '',
 };
