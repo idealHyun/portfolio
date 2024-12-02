@@ -3,11 +3,11 @@ import { ProjectType } from '../../types/projectType';
 export const ERP: ProjectType = {
   title: 'ERP 프로그램',
   mdFilePath: '/markdown/ERP.mdx',
-  subTitle: '',
+  subTitle: '소규모 회사를 위한 ERP 프로그램',
   startDate: '',
   endDate: '',
-  category: 'Personal',
-  techStacks: [],
-  githubUrl: '',
+  category: 'Team',
+  techStacks: ['csharp', 'mysql'],
+  githubUrl: null,
   images: null,
 };
