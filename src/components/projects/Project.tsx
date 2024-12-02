@@ -4,17 +4,27 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import TechStack from '@/components/projects/TechStack';
 import { ProjectType } from '../../../types/projectType';
-import Modal from '@/components/projects/Modal';
+import MdxModal from '@/components/projects/MdxModal';
+import ImageModal from '@/components/projects/ImageModal';
 
 export default function Project({ project }: { project: ProjectType }) {
-  const [isModal, setIsModal] = useState<boolean>(false);
+  const [isMdxModal, setIsMdxModal] = useState<boolean>(false);
+  const [isImageModal, setIsImageModal] = useState<boolean>(false);
 
   const readmeClick = () => {
-    setIsModal(true);
+    setIsMdxModal(true);
   };
 
   const handleClose = () => {
-    setIsModal(false);
+    setIsMdxModal(false);
+  };
+
+  const openImageModal = () => {
+    setIsImageModal(true);
+  };
+
+  const closeImageModal = () => {
+    setIsImageModal(false);
   };
 
   return (
@@ -46,13 +56,21 @@ export default function Project({ project }: { project: ProjectType }) {
             ))}
           </div>
 
-          <div className="flex ">
+          <div className="flex">
             <button
               className="rounded-lg bg-gray-800 p-1 text-white"
               onClick={readmeClick}
             >
               README
             </button>
+            {project.images.length > 0 && (
+              <button
+                className="rounded-lg bg-gray-800 p-1 text-white"
+                onClick={openImageModal}
+              >
+                Images
+              </button>
+            )}
             {project.githubUrl && (
               <button
                 className="rounded-lg bg-gray-800 p-1 text-white"
@@ -64,14 +82,22 @@ export default function Project({ project }: { project: ProjectType }) {
           </div>
         </div>
       </div>
-      {/* Modal Component */}
-      {isModal && (
-        <Modal
-          isOpen={isModal}
+
+      {/* Modal Component for MD */}
+      {isMdxModal && (
+        <MdxModal
+          isOpen={isMdxModal}
           onClose={handleClose}
           mdFilePath={project.mdFilePath}
-        ></Modal>
+        ></MdxModal>
       )}
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={isImageModal}
+        onClose={closeImageModal}
+        images={project.images}
+      />
     </>
   );
 }
