@@ -58,8 +58,8 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, images }) => {
           <Image
             src={images[currentImageIndex]}
             alt={`Project Image ${currentImageIndex + 1}`}
-            width={600}
-            height={400}
+            width={800}
+            height={800}
             className="max-w-full max-h-[80vh]"
           />
 

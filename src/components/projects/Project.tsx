@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import TechStack from '@/components/projects/TechStack';
 import { ProjectType } from '../../../types/projectType';
@@ -26,6 +26,14 @@ export default function Project({ project }: { project: ProjectType }) {
   const closeImageModal = () => {
     setIsImageModal(false);
   };
+
+  useEffect(() => {
+    if (isMdxModal || isImageModal) {
+      document.body.style.overflow = 'hidden'; // 모달 열렸을 때 스크롤 방지
+    } else {
+      document.body.style.overflow = 'auto'; // 모달 닫혔을 때 스크롤 허용
+    }
+  }, [isMdxModal, isImageModal]);
 
   return (
     <>
