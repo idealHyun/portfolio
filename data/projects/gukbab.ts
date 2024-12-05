@@ -15,6 +15,7 @@ export const gukbab: ProjectType = {
     '/images/projects/gukbab/gukbab3.png',
     '/images/projects/gukbab/gukbab4.png',
     '/images/projects/gukbab/gukbab5.png',
+    '/images/projects/gukbab/gukbab6.png',
   ],
   thumbNail: '/images/projects/gukbab/gukbab.png',
 };
