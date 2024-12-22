@@ -1,12 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
-
-export default function Header({}: Props) {
+export default function Header() {
+  const navLinks = ['ABOUT', 'SKILLS', 'ACTIVITY', 'CONTACT'];
 
   return (
-    <div>
-        ABOUT ME, SKILLS, PROJECTS, ACTIVITY, CONTACT
-    </div>
-  )
+    <header className="fixed top-0 right-20 flex items-center p-4 px-10 rounded-bl-2xl rounded-br-2xl bg-gray-800 opacity-70 text-white">
+      <nav>
+        <ul className="flex space-x-10 text-xl">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <a
+                href={`#${link.replace(/\s+/g, '').toLowerCase()}`}
+                className="hover:text-blue-400"
+              >
+                {link}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
 }

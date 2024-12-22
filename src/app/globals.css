@@ -3,26 +3,128 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+    color: rgb(var(--foreground-rgb));
 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
+
+@layer base {
+    .markdown-wrapper {
+        all: unset;
+        font-family: sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .markdown-wrapper h1,
+    .markdown-wrapper h2,
+    .markdown-wrapper h3,
+    .markdown-wrapper h4,
+    .markdown-wrapper h5,
+    .markdown-wrapper h6 {
+        @apply font-bold my-4;
+    }
+
+    .markdown-wrapper h1 {
+        @apply text-4xl;
+    }
+
+    .markdown-wrapper h2 {
+        @apply text-3xl;
+    }
+
+    .markdown-wrapper h3 {
+        @apply text-2xl;
+    }
+
+    .markdown-wrapper h4 {
+        @apply text-xl;
+    }
+
+    .markdown-wrapper h5 {
+        @apply text-lg;
+    }
+
+    .markdown-wrapper h6 {
+        @apply text-base;
+    }
+
+    .markdown-wrapper p {
+        @apply my-4;
+    }
+
+    .markdown-wrapper ul {
+        @apply list-disc ml-6 my-4;
+    }
+
+    .markdown-wrapper ol {
+        @apply list-decimal ml-6 my-4;
+    }
+
+    .markdown-wrapper li {
+        @apply mb-2;
+    }
+
+    .markdown-wrapper blockquote {
+        @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+    }
+
+    .markdown-wrapper a {
+        @apply text-blue-500 underline;
+        transition: color 0.2s;
+
+        &:hover {
+            @apply text-blue-700;
+        }
+    }
+
+    .markdown-wrapper pre {
+        @apply bg-gray-100 rounded-md p-4 overflow-auto my-4;
+    }
+
+    .markdown-wrapper code {
+        @apply bg-gray-200 rounded-md px-1 py-0.5 text-sm font-mono;
+    }
+
+    .markdown-wrapper table {
+        @apply border-collapse border border-gray-300 w-full my-4;
+    }
+
+    .markdown-wrapper th,
+    .markdown-wrapper td {
+        @apply border border-gray-300 px-4 py-2 text-left;
+    }
+
+    .markdown-wrapper th {
+        @apply bg-gray-200 font-bold;
+    }
+}
+
