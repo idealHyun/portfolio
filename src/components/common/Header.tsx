@@ -1,15 +1,12 @@
 import React from 'react';
 
-type Props = {};
-
-export default function Header({}: Props) {
+export default function Header() {
   const navLinks = ['ABOUT', 'SKILLS', 'ACTIVITY', 'CONTACT'];
 
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white w-full">
-      <span className="text-xl font-bold">idealHyun</span>
+    <header className="fixed top-0 right-20 flex items-center p-4 px-10 rounded-bl-2xl rounded-br-2xl bg-gray-800 opacity-70 text-white">
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-10 text-xl">
           {navLinks.map((link, index) => (
             <li key={index}>
               <a
