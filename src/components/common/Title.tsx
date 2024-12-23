@@ -14,7 +14,7 @@ export default function Title({ title }: TitleProps) {
   return (
     <div
       ref={titleRef}
-      className={`flex justify-center text-2xl font-bold ${visibleClass}`}
+      className={`flex justify-center text-4xl font-bold ${visibleClass}`}
     >
       {title}
     </div>
