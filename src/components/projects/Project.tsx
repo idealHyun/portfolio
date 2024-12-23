@@ -1,15 +1,19 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import TechStack from '@/components/projects/TechStack';
 import { ProjectType } from '../../../types/projectType';
 import MdxModal from '@/components/projects/MdxModal';
 import ImageModal from '@/components/projects/ImageModal';
+import { useIsVisible } from '@/hooks/useIsVisible';
 
 export default function Project({ project }: { project: ProjectType }) {
   const [isMdxModal, setIsMdxModal] = useState<boolean>(false);
   const [isImageModal, setIsImageModal] = useState<boolean>(false);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const isVisible = useIsVisible(projectRef);
+  const visibleClass = isVisible ? 'animate-fadeIn' : '';
 
   const readmeClick = () => {
     setIsMdxModal(true);
@@ -36,15 +40,21 @@ export default function Project({ project }: { project: ProjectType }) {
   }, [isMdxModal, isImageModal]);
 
   return (
-    <>
+    <div ref={projectRef} className={`${visibleClass} p-16`}>
       <div
         key={project.title}
-        className="flex w-full justify-center items-center border-2 rounded-xl overflow-hidden"
+        className="flex flex-col w-full justify-center items-start border-2 rounded-xl overflow-hidden"
       >
         {/* Project Thumbnail */}
-        <Image src={project.thumbNail} alt="Project" width={150} height={200} />
+        <Image
+          src={project.thumbNail}
+          alt="Project"
+          layout="responsive"
+          width={3}
+          height={2}
+        />
         {/* Project Content */}
-        <div className="flex h-full flex-col justify-between items-start px-4 py-2">
+        <div className="flex h-full flex-col gap-2 justify-start items-start px-4 py-2">
           <div>
             <span className="inline-block w-auto rounded-lg bg-blue-400 p-1">
               {project.category}
@@ -54,8 +64,8 @@ export default function Project({ project }: { project: ProjectType }) {
             {project.startDate} ~ {project.endDate}
           </div>
           <div>
-            <div className="text-2xl">{project.title}</div>
-            <div>{project.subTitle}</div>
+            <div className="text-2xl font-bold">{project.title}</div>
+            <span className="font-bold">{project.subTitle}</span>
           </div>
 
           <div className="flex items-center gap-1 pb-1">
@@ -64,16 +74,16 @@ export default function Project({ project }: { project: ProjectType }) {
             ))}
           </div>
 
-          <div className="flex">
+          <div className="flex gap-4">
             <button
-              className="rounded-lg bg-gray-800 p-1 text-white"
+              className="rounded-lg bg-gray-800 py-1 px-2 text-white"
               onClick={readmeClick}
             >
               README
             </button>
             {project.images.length > 0 && (
               <button
-                className="rounded-lg bg-gray-800 p-1 text-white"
+                className="rounded-lg bg-gray-800 py-1 px-2 text-white"
                 onClick={openImageModal}
               >
                 Images
@@ -81,7 +91,7 @@ export default function Project({ project }: { project: ProjectType }) {
             )}
             {project.githubUrl && (
               <button
-                className="rounded-lg bg-gray-800 p-1 text-white"
+                className="rounded-lg bg-gray-800 py-1 px-2 text-white"
                 onClick={() => window.open(project.githubUrl!, '_blank')}
               >
                 Github
@@ -106,6 +116,6 @@ export default function Project({ project }: { project: ProjectType }) {
         onClose={closeImageModal}
         images={project.images}
       />
-    </>
+    </div>
   );
 }
