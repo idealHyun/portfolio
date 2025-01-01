@@ -40,7 +40,7 @@ export default function Project({ project }: { project: ProjectType }) {
   }, [isMdxModal, isImageModal]);
 
   return (
-    <div ref={projectRef} className={`${visibleClass} p-16`}>
+    <div ref={projectRef} className={`${visibleClass} md:p-16`}>
       <div
         key={project.title}
         className="flex flex-col w-full justify-center items-start border-2 rounded-xl overflow-hidden"
@@ -81,7 +81,7 @@ export default function Project({ project }: { project: ProjectType }) {
             >
               README
             </button>
-            {project.images.length > 0 && (
+            {project.images!.length > 0 && (
               <button
                 className="rounded-lg bg-gray-800 py-1 px-2 text-white"
                 onClick={openImageModal}
@@ -114,7 +114,7 @@ export default function Project({ project }: { project: ProjectType }) {
       <ImageModal
         isOpen={isImageModal}
         onClose={closeImageModal}
-        images={project.images}
+        images={project.images!}
       />
     </div>
   );

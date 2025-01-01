@@ -18,14 +18,17 @@ export default function SkillSection() {
   const etcSkills: string[] = ['git', 'figma'];
 
   return (
-    <section id="skills" className="flex flex-col w-full bg-gray-100">
+    <section
+      id="skills"
+      className="p-4 md:p-20 flex flex-col w-full bg-gray-100"
+    >
       <Title title="SKILLS" />
 
-      <div className="flex flex-col gap-4 bg-white m-10 p-4 px-36 rounded-2xl">
+      <div className="flex flex-col gap-4 bg-white p-8 rounded-2xl">
         {/* Languages */}
         <div id="language" className="flex gap-2">
-          <span className="text-xl font-semibold flex-[1]">Languages</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
+          <span className="text-lg font-bold flex-[1]">Languages</span>
+          <div className="flex flex-wrap gap-2 flex-[4]">
             {languages.map((language: string) => (
               <SkillIcon key={language} skillName={language} />
             ))}
@@ -33,8 +36,8 @@ export default function SkillSection() {
         </div>
         {/* FrontEnd */}
         <div id="frontend" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">FrontEnd</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
+          <span className="text-lg font-bold flex-[1]">FrontEnd</span>
+          <div className="flex flex-wrap gap-2 flex-[4]">
             {frontendSkills.map((skill: string) => (
               <SkillIcon key={skill} skillName={skill} />
             ))}
@@ -42,8 +45,8 @@ export default function SkillSection() {
         </div>
         {/* BackEnd */}
         <div id="backend" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">BackEnd</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
+          <span className="text-lg font-bold flex-[1]">BackEnd</span>
+          <div className="flex flex-wrap gap-2 flex-[4]">
             {backendSkills.map((skill: string) => (
               <SkillIcon key={skill} skillName={skill} />
             ))}
@@ -51,8 +54,8 @@ export default function SkillSection() {
         </div>
         {/* DevOps */}
         <div id="devops" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">DevOps</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
+          <span className="text-lg font-bold flex-[1]">DevOps</span>
+          <div className="flex flex-wrap gap-2 flex-[4]">
             {devopsSkills.map((skill: string) => (
               <SkillIcon key={skill} skillName={skill} />
             ))}
@@ -60,8 +63,8 @@ export default function SkillSection() {
         </div>
         {/* Etc */}
         <div id="etc" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">Etc</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
+          <span className="text-lg font-bold flex-[1]">Etc</span>
+          <div className="flex flex-wrap gap-2 flex-[4]">
             {etcSkills.map((skill: string) => (
               <SkillIcon key={skill} skillName={skill} />
             ))}

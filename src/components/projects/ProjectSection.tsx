@@ -9,7 +9,7 @@ export default function ProjectSection() {
       <span className="flex justify-center mb-2">2024</span>
 
       {/* 프로젝트 영역 */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-8 p-4 h-full">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-8 h-full">
         {/* 왼쪽 프로젝트 */}
         <div className="space-y-8">
           {projects
