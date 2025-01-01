@@ -8,8 +8,8 @@ export const soulMBTI: ProjectType = {
   startDate: '2024.02',
   endDate: '2024.06',
   category: 'Team',
-  techStacks: ['dart', 'flutter', 'firebase', 'nodejs', 'mysql'],
+  techStacks: ['dart', 'flutter', 'firebase', 'nodejs'],
   githubUrl: 'https://github.com/C4-KSCL/SOUL-MBTIE',
   images: [],
-  thumbNail: '',
+  thumbNail: '/images/projects/soulmbtie/soulmbtie.svg',
 };

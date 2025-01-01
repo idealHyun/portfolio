@@ -10,5 +10,5 @@ export const smileHub: ProjectType = {
   techStacks: ['javascript', 'react', 'sass', 'mysql', 'netlify', 'figma'],
   githubUrl: 'https://github.com/MangoWafflee/Frontend',
   images: [],
-  thumbNail: '/images/projects/smileHub/smileHub.png',
+  thumbNail: '/images/projects/smileHub/smileHub.svg',
 };
