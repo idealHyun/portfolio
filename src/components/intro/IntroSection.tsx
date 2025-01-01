@@ -1,4 +1,4 @@
-import Arrow from '@/components/common/Arrow';
+import Arrow from '@/components/intro/Arrow';
 import Image from 'next/image';
 
 const IntroSection = () => {

@@ -21,7 +21,7 @@ export default function SkillSection() {
     <section id="skills" className="flex flex-col w-full bg-gray-100">
       <Title title="SKILLS" />
 
-      <div className="flex flex-col gap-4 bg-white m-10 p-4 rounded-2xl">
+      <div className="flex flex-col gap-4 bg-white m-10 p-4 px-36 rounded-2xl">
         {/* Languages */}
         <div id="language" className="flex gap-2">
           <span className="text-xl font-semibold flex-[1]">Languages</span>
