@@ -19,9 +19,20 @@ const config: Config = {
         '0%': { transform: 'translateX(-100%)', opacity: '0' },
         '100%': { transform: 'translateX(0)', opacity: '1' },
       },
+      bounce: {
+        '0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+        '40%': { transform: 'translateY(-30px)' },
+        '60%': { transform: 'translateY(-15px)' },
+      },
+      fadeIn: {
+        '0%': { opacity: '0', transform: 'translateX(-20px)' },
+        '100%': { opacity: '1', transform: 'translateX(0)' },
+      },
     },
     animation: {
       slideInLeft: 'slideInLeft 0.5s ease-out forwards',
+      bounce: 'bounce 2s infinite',
+      fadeIn: 'fadeIn 2s ease-out forwards',
     },
   },
   plugins: [],

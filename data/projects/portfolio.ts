@@ -5,10 +5,10 @@ export const portfolio: ProjectType = {
   mdFilePath: '/markdown/portfolio.mdx',
   subTitle: '웹으로 포트폴리오 구현',
   startDate: '2024.11.10',
-  endDate: '2024.12',
+  endDate: '진행중',
   category: 'Personal',
-  techStacks: ['typescript', 'nextjs', 'tailwind'],
+  techStacks: ['typescript', 'next', 'tailwindcss', 'vercel'],
   githubUrl: 'https://github.com/idealHyun/portfolio',
   images: [],
-  thumbNail: '',
+  thumbNail: '/images/projects/portfolio/portfolio.svg',
 };

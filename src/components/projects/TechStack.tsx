@@ -15,9 +15,9 @@ export default function TechStack({ techName }: Props) {
         alt={'stack'}
         priority
         quality={100}
-        width={15}
-        height={15}
-        style={{ width: 15, height: 15 }}
+        width={20}
+        height={20}
+        style={{ width: 20, height: 20 }}
       />
     </div>
   );

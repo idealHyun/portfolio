@@ -1,5 +1,5 @@
-import SkillIcon from '@/components/skills/SkillIcon';
 import Title from '@/components/common/Title';
+import Skill from '@/components/skills/Skill';
 
 export default function SkillSection() {
   const languages: string[] = ['javascript', 'typescript', 'dart'];
@@ -18,55 +18,18 @@ export default function SkillSection() {
   const etcSkills: string[] = ['git', 'figma'];
 
   return (
-    <section id="skills" className="flex flex-col w-full bg-gray-100">
+    <section
+      id="skills"
+      className="p-4 md:p-20 flex flex-col w-full bg-gray-100"
+    >
       <Title title="SKILLS" />
 
-      <div className="flex flex-col gap-4 bg-white m-10 p-4 rounded-2xl">
-        {/* Languages */}
-        <div id="language" className="flex gap-2">
-          <span className="text-xl font-semibold flex-[1]">Languages</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
-            {languages.map((language: string) => (
-              <SkillIcon key={language} skillName={language} />
-            ))}
-          </div>
-        </div>
-        {/* FrontEnd */}
-        <div id="frontend" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">FrontEnd</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
-            {frontendSkills.map((skill: string) => (
-              <SkillIcon key={skill} skillName={skill} />
-            ))}
-          </div>
-        </div>
-        {/* BackEnd */}
-        <div id="backend" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">BackEnd</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
-            {backendSkills.map((skill: string) => (
-              <SkillIcon key={skill} skillName={skill} />
-            ))}
-          </div>
-        </div>
-        {/* DevOps */}
-        <div id="devops" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">DevOps</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
-            {devopsSkills.map((skill: string) => (
-              <SkillIcon key={skill} skillName={skill} />
-            ))}
-          </div>
-        </div>
-        {/* Etc */}
-        <div id="etc" className="flex gap-2">
-          <span className="text-xl font-bold flex-[1]">Etc</span>
-          <div className="flex flex-wrap gap-2 flex-[3]">
-            {etcSkills.map((skill: string) => (
-              <SkillIcon key={skill} skillName={skill} />
-            ))}
-          </div>
-        </div>
+      <div className="flex flex-col gap-4 bg-white p-8 rounded-2xl">
+        <Skill skillCategory="Languages" skillNames={languages} />
+        <Skill skillCategory="Frontend" skillNames={frontendSkills} />
+        <Skill skillCategory="Backend" skillNames={backendSkills} />
+        <Skill skillCategory="Devops" skillNames={devopsSkills} />
+        <Skill skillCategory="Etc" skillNames={etcSkills} />
       </div>
     </section>
   );

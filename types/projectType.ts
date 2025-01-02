@@ -6,7 +6,8 @@ export type ProjectType = {
   endDate: string;
   category: 'Personal' | 'Team';
   techStacks: string[];
-  githubUrl: string | null;
-  images: string[];
+  githubUrl?: string;
+  images?: string[];
   thumbNail: string;
+  serviceUrl?: string;
 };
