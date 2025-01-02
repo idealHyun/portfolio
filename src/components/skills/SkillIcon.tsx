@@ -13,8 +13,8 @@ export default function SkillIcon({ skillName }: Props) {
 
   const handleMouseMove = (event: React.MouseEvent) => {
     setTooltipPosition({
-      x: event.clientX + 10, // 마우스 커서 오른쪽에 10px 띄움
-      y: event.clientY + 10, // 마우스 커서 아래쪽에 10px 띄움
+      x: event.clientX + 10,
+      y: event.clientY + 10,
     });
   };
 
@@ -50,7 +50,7 @@ export default function SkillIcon({ skillName }: Props) {
           style={{
             left: tooltipPosition.x,
             top: tooltipPosition.y,
-            zIndex: 9999, // 가장 앞에 나오도록 설정
+            zIndex: 9999,
           }}
         >
           {skillName}
