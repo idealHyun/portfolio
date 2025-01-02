@@ -43,7 +43,7 @@ export default function Project({ project }: { project: ProjectType }) {
     <div ref={projectRef} className={`${visibleClass} md:p-16`}>
       <div
         key={project.title}
-        className="flex flex-col w-full justify-center items-start border-2 rounded-xl overflow-hidden"
+        className="flex flex-col w-full justify-center items-start border-2 rounded-xl overflow-hidden shadow-xl"
       >
         {/* Project Thumbnail */}
         <Image

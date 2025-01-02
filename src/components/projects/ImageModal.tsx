@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import ReactDOM from 'react-dom';
 
 interface ImageModalProps {
   isOpen: boolean;
@@ -26,7 +27,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, images }) => {
 
   if (!isOpen) return null;
 
-  return (
+  return ReactDOM.createPortal(
     <div
       className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50"
       onClick={onClose}
@@ -39,7 +40,12 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, images }) => {
           onClick={onClose}
           className="absolute top-2 right-2 text-xl font-bold text-gray-600"
         >
-          &times;
+          <Image
+            alt={'x button'}
+            src={'/icons/xmark.svg'}
+            width={'20'}
+            height={'20'}
+          />
         </button>
 
         <div className="flex justify-center items-center">
@@ -51,7 +57,12 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, images }) => {
             }`}
             disabled={currentImageIndex === 0}
           >
-            &lt;
+            <Image
+              alt={'left button'}
+              src={'/icons/left-arrow.svg'}
+              width={'20'}
+              height={'20'}
+            />
           </button>
 
           {/* Image */}
@@ -73,11 +84,17 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, images }) => {
             }`}
             disabled={currentImageIndex === images.length - 1}
           >
-            &gt;
+            <Image
+              alt={'right button'}
+              src={'/icons/right-arrow.svg'}
+              width={'20'}
+              height={'20'}
+            />
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
