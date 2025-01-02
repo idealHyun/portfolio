@@ -5,10 +5,11 @@ import { gukbab } from './gukbab';
 import { smileHub } from './smileHub';
 import { clickmeee } from './clickmeee';
 
-export const projects: ProjectType[] = [
-  clickmeee,
-  smileHub,
-  soulMBTI,
-  ERP,
-  gukbab,
-];
+type ProjectsByYear = {
+  [year: string]: ProjectType[];
+};
+
+export const projects: ProjectsByYear = {
+  '2024': [clickmeee, smileHub, soulMBTI],
+  '2023': [ERP, gukbab],
+};
