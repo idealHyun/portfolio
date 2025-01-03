@@ -81,7 +81,7 @@ export default function Project({ project }: { project: ProjectType }) {
               />
               README
             </button>
-            {project.images!.length > 0 && (
+            {project.images && (
               <button
                 className="rounded-lg bg-gray-800 py-1 px-2 text-white flex items-center justify-center gap-1"
                 onClick={openImageModal}

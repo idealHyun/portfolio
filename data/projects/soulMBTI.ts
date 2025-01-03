@@ -10,6 +10,5 @@ export const soulMBTI: ProjectType = {
   category: 'Team',
   techStacks: ['dart', 'flutter', 'firebase', 'nodejs'],
   githubUrl: 'https://github.com/C4-KSCL/SOUL-MBTIE',
-  images: [],
   thumbNail: '/images/projects/soulmbtie/soulmbtie.svg',
 };
