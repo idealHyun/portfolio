@@ -9,6 +9,5 @@ export const portfolio: ProjectType = {
   category: 'Personal',
   techStacks: ['typescript', 'next', 'tailwindcss', 'vercel'],
   githubUrl: 'https://github.com/idealHyun/portfolio',
-  images: [],
   thumbNail: '/images/projects/portfolio/portfolio.svg',
 };

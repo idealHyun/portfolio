@@ -9,7 +9,6 @@ export const clickmeee: ProjectType = {
   category: 'Team',
   techStacks: ['typescript', 'react', 'vite', 'tailwindcss', 'recoil'],
   githubUrl: 'https://github.com/ClickMeee',
-  images: [],
   thumbNail: '/images/projects/clickmeee/clickmeee.svg',
   serviceUrl: 'https://클릭해줘.메인.한국',
 };

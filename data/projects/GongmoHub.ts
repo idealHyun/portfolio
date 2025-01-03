@@ -9,6 +9,5 @@ export const gongmoHub: ProjectType = {
   category: 'Team',
   techStacks: ['typescript', 'next', 'sass', 'antd', 'figma'],
   githubUrl: 'https://github.com/GongmoHub',
-  images: [],
-  thumbNail: '',
+  thumbNail: '/images/projects/gongmoHub/gongmoHub.svg',
 };

@@ -15,7 +15,6 @@ export default function Home() {
       <SkillSection />
       {/* PROJECTS */}
       <ProjectSection />
-      <section id="activity" className="flex flex-col"></section>
       <section id="contact" className="flex flex-col"></section>
     </main>
   );

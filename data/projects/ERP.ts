@@ -8,6 +8,14 @@ export const ERP: ProjectType = {
   endDate: '',
   category: 'Team',
   techStacks: ['csharp', 'mysql'],
-  images: [],
-  thumbNail: '',
+  images: [
+    '/images/projects/ERP/ERP1.svg',
+    '/images/projects/ERP/ERP2.svg',
+    '/images/projects/ERP/ERP3.svg',
+    '/images/projects/ERP/ERP4.svg',
+    '/images/projects/ERP/ERP5.svg',
+    '/images/projects/ERP/ERP6.svg',
+    '/images/projects/ERP/ERP7.svg',
+  ],
+  thumbNail: '/images/projects/ERP/ERP.svg',
 };

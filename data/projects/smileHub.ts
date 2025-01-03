@@ -17,6 +17,5 @@ export const smileHub: ProjectType = {
     'figma',
   ],
   githubUrl: 'https://github.com/MangoWafflee/Frontend',
-  images: [],
   thumbNail: '/images/projects/smileHub/smileHub.svg',
 };

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // 메뉴 상태
-  const navLinks = ['ABOUT', 'SKILLS', 'ACTIVITY', 'CONTACT'];
+  const navLinks = ['ABOUT', 'SKILLS', 'PROJECTS', 'CONTACT'];
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev); // 메뉴 열기/닫기 상태 토글
