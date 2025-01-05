@@ -4,7 +4,7 @@ import { projects } from '../../../data/projects/projects';
 
 export default function ProjectSection() {
   return (
-    <section id="projects" className="p-4 w-full h-full">
+    <section id="projects" className="p-4 pb-20  w-full h-full">
       <Title title="PROJECTS" />
       {Object.entries(projects)
         .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
