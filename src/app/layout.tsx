@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: '이상현 | 웹 개발자 포트폴리오',
   description: '이상현 | 웹 개발자 포트폴리오',
+  icons: {
+    icon: '/images/portfolio.svg',
+  },
   openGraph: {
     title: '이상현 | 웹 개발자 포트폴리오',
     description: '웹 개발에 열정을 가진 개발자의 포트폴리오입니다.',
