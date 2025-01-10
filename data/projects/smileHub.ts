@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const smileHub: ProjectType = {
   title: 'Smile Hub',

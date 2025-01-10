@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const review: ProjectType = {
   title: '리뷰 생성 서비스',

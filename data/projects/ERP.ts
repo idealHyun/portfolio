@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const ERP: ProjectType = {
   title: 'ERP 프로그램',

@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const gongmoHub: ProjectType = {
   title: 'GongmoHub',

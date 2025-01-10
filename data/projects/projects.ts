@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 import { soulMBTI } from './soulMBTI';
 import { ERP } from './ERP';
 import { gukbab } from './gukbab';

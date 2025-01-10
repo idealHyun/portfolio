@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import TechStack from '@/components/projects/TechStack';
-import { ProjectType } from '../../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 import MdxModal from '@/components/projects/MdxModal';
 import ImageModal from '@/components/projects/ImageModal';
 import { useIsVisible } from '@/hooks/useIsVisible';

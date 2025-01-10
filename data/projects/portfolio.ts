@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const portfolio: ProjectType = {
   title: '포트폴리오 사이트',
