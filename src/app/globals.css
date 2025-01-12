@@ -44,17 +44,16 @@ body {
         color: #333;
     }
 
-    .markdown-wrapper h1,
     .markdown-wrapper h2,
     .markdown-wrapper h3,
     .markdown-wrapper h4,
     .markdown-wrapper h5,
     .markdown-wrapper h6 {
-        @apply font-bold my-4;
+        @apply font-bold mt-8 mb-4;
     }
 
     .markdown-wrapper h1 {
-        @apply text-4xl;
+        @apply text-4xl font-bold my-4;
     }
 
     .markdown-wrapper h2 {

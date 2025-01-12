@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const gukbab: ProjectType = {
   title: '국밥집 프로그램',

@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const smileHub: ProjectType = {
   title: 'Smile Hub',
@@ -17,6 +17,5 @@ export const smileHub: ProjectType = {
     'figma',
   ],
   githubUrl: 'https://github.com/MangoWafflee/Frontend',
-  images: [],
   thumbNail: '/images/projects/smileHub/smileHub.svg',
 };

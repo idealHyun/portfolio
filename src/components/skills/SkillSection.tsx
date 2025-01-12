@@ -20,7 +20,7 @@ export default function SkillSection() {
   return (
     <section
       id="skills"
-      className="p-4 md:p-20 flex flex-col w-full bg-gray-100"
+      className="p-4 pb-20 md:px-1/5 md:pt-4 flex flex-col w-full bg-gray-100"
     >
       <Title title="SKILLS" />
 

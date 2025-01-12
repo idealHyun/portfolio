@@ -1,4 +1,4 @@
-import { ProjectType } from '../../types/projectType';
+import { ProjectType } from '@/types/projectType';
 
 export const umbrellaShare: ProjectType = {
   title: '공유 우산 플랫폼',
