@@ -49,12 +49,10 @@ export default function Project({ project }: { project: ProjectType }) {
         <Image src={project.thumbNail} alt="Project" width={600} height={300} />
         {/* Project Content */}
         <div className="flex h-full flex-col gap-2 justify-start items-start px-4 py-2">
-          <div>
+          <div className="flex justify-center items-center gap-4">
             <span className="inline-block w-auto rounded-lg bg-blue-400 p-1">
               {project.category}
             </span>
-          </div>
-          <div className="flex">
             {project.startDate} ~ {project.endDate}
           </div>
           <div>
